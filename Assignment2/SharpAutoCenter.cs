@@ -26,5 +26,60 @@ namespace Assignment2
         {
 
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SalesTaxLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TotalLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AmmountDueLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubTotalLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdditionalOptionsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BasePriceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
