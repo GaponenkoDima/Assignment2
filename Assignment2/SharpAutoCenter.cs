@@ -102,6 +102,10 @@ namespace Assignment2
 
         }
 
-
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutForm = new AboutBox1();
+            aboutForm.ShowDialog();
+        }
     }
 }

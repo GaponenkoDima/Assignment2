@@ -74,9 +74,9 @@
             // CalculateButton
             // 
             this.CalculateButton.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CalculateButton.Location = new System.Drawing.Point(21, 314);
+            this.CalculateButton.Location = new System.Drawing.Point(22, 303);
             this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(81, 23);
+            this.CalculateButton.Size = new System.Drawing.Size(88, 33);
             this.CalculateButton.TabIndex = 0;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
@@ -84,9 +84,9 @@
             // ClearButton
             // 
             this.ClearButton.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ClearButton.Location = new System.Drawing.Point(218, 313);
+            this.ClearButton.Location = new System.Drawing.Point(218, 303);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.Size = new System.Drawing.Size(75, 33);
             this.ClearButton.TabIndex = 1;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.Location = new System.Drawing.Point(433, 313);
+            this.ExitButton.Location = new System.Drawing.Point(433, 303);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.Size = new System.Drawing.Size(75, 33);
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@
             this.ComputerNavigationCheckBox3.AutoSize = true;
             this.ComputerNavigationCheckBox3.Location = new System.Drawing.Point(7, 76);
             this.ComputerNavigationCheckBox3.Name = "ComputerNavigationCheckBox3";
-            this.ComputerNavigationCheckBox3.Size = new System.Drawing.Size(162, 21);
+            this.ComputerNavigationCheckBox3.Size = new System.Drawing.Size(189, 24);
             this.ComputerNavigationCheckBox3.TabIndex = 2;
             this.ComputerNavigationCheckBox3.Text = "Computer Navigation";
             this.ComputerNavigationCheckBox3.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             this.LeatherInteriorCheckBox.AutoSize = true;
             this.LeatherInteriorCheckBox.Location = new System.Drawing.Point(7, 49);
             this.LeatherInteriorCheckBox.Name = "LeatherInteriorCheckBox";
-            this.LeatherInteriorCheckBox.Size = new System.Drawing.Size(128, 21);
+            this.LeatherInteriorCheckBox.Size = new System.Drawing.Size(149, 24);
             this.LeatherInteriorCheckBox.TabIndex = 1;
             this.LeatherInteriorCheckBox.Text = "Leather Interior";
             this.LeatherInteriorCheckBox.UseVisualStyleBackColor = true;
@@ -193,7 +193,7 @@
             this.StereoSystemCheckBox.AutoSize = true;
             this.StereoSystemCheckBox.Location = new System.Drawing.Point(7, 23);
             this.StereoSystemCheckBox.Name = "StereoSystemCheckBox";
-            this.StereoSystemCheckBox.Size = new System.Drawing.Size(114, 21);
+            this.StereoSystemCheckBox.Size = new System.Drawing.Size(133, 24);
             this.StereoSystemCheckBox.TabIndex = 0;
             this.StereoSystemCheckBox.Text = "Stereo System";
             this.StereoSystemCheckBox.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.radioButton6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton6.Location = new System.Drawing.Point(7, 68);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(160, 21);
+            this.radioButton6.Size = new System.Drawing.Size(187, 24);
             this.radioButton6.TabIndex = 2;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Customized Detailing";
@@ -230,7 +230,7 @@
             this.radioButton5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton5.Location = new System.Drawing.Point(7, 44);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(83, 21);
+            this.radioButton5.Size = new System.Drawing.Size(97, 24);
             this.radioButton5.TabIndex = 1;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Pearlized";
@@ -239,10 +239,11 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
+            this.radioButton4.Checked = true;
             this.radioButton4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton4.Location = new System.Drawing.Point(7, 20);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(82, 21);
+            this.radioButton4.Size = new System.Drawing.Size(96, 24);
             this.radioButton4.TabIndex = 0;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Standard";
@@ -341,7 +342,8 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F10)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -358,26 +360,30 @@
             // CalculateItem
             // 
             this.CalculateItem.Name = "CalculateItem";
-            this.CalculateItem.Size = new System.Drawing.Size(152, 22);
+            this.CalculateItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
+            this.CalculateItem.Size = new System.Drawing.Size(157, 22);
             this.CalculateItem.Text = "Calculate";
             this.CalculateItem.ToolTipText = "Calculate";
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.fontToolStripMenuItem.Text = "Font";
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.colorToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.colorToolStripMenuItem.Text = "Color";
             // 
             // languageToolStripMenuItem
@@ -392,13 +398,17 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.englishToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
             // frenchToolStripMenuItem
             // 
             this.frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
-            this.frenchToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.frenchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.frenchToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.frenchToolStripMenuItem.Text = "French";
             // 
             // helpToolStripMenuItem
@@ -412,8 +422,11 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.A)));
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // TradeInLabel
             // 
