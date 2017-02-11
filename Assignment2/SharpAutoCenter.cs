@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace Assignment2
 {
     public partial class SharpAutoCenter : Form
+
     {
+        public Form previousForm;
         public SharpAutoCenter()
         {
             InitializeComponent();
@@ -26,7 +28,25 @@ namespace Assignment2
         {
 
         }
+        private void SharpAutoCenter_FormClosing(object sender, FormClosingEventArgs e)
+        {
 
+
+            DialogResult result = MessageBox.Show("Are You Sure?", "Confirm",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+                this.previousForm.Close();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+
+
+
+        }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
@@ -81,5 +101,7 @@ namespace Assignment2
         {
 
         }
+
+
     }
 }
