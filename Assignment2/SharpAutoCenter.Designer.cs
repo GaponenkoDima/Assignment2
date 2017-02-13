@@ -31,20 +31,20 @@
             this.CalculateButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.BasePriceTextBox = new System.Windows.Forms.TextBox();
+            this.AdditionalOptionsTextBox = new System.Windows.Forms.TextBox();
+            this.SubTotalTextBox = new System.Windows.Forms.TextBox();
+            this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
+            this.TotalTextBox = new System.Windows.Forms.TextBox();
+            this.AmountDueTextBox = new System.Windows.Forms.TextBox();
             this.AdditionalItemsBox = new System.Windows.Forms.GroupBox();
-            this.ComputerNavigationCheckBox3 = new System.Windows.Forms.CheckBox();
+            this.ComputerNavigationCheckBox = new System.Windows.Forms.CheckBox();
             this.LeatherInteriorCheckBox = new System.Windows.Forms.CheckBox();
             this.StereoSystemCheckBox = new System.Windows.Forms.CheckBox();
             this.ExteriorFinishBox = new System.Windows.Forms.GroupBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.CustomizedButton = new System.Windows.Forms.RadioButton();
+            this.PearlizedButton = new System.Windows.Forms.RadioButton();
+            this.StandardButton = new System.Windows.Forms.RadioButton();
             this.BasePriceLabel = new System.Windows.Forms.Label();
             this.AdditionalOptionsLabel = new System.Windows.Forms.Label();
             this.SubTotalLabel = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TradeInLabel = new System.Windows.Forms.Label();
             this.TradeInTextBox = new System.Windows.Forms.TextBox();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.AdditionalItemsBox.SuspendLayout();
             this.ExteriorFinishBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -80,6 +81,7 @@
             this.CalculateButton.TabIndex = 0;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // ClearButton
             // 
@@ -90,6 +92,7 @@
             this.ClearButton.TabIndex = 1;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // ExitButton
             // 
@@ -100,64 +103,70 @@
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // textBox1
+            // BasePriceTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(174, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 27);
-            this.textBox1.TabIndex = 4;
+            this.BasePriceTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BasePriceTextBox.Location = new System.Drawing.Point(195, 58);
+            this.BasePriceTextBox.Name = "BasePriceTextBox";
+            this.BasePriceTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.BasePriceTextBox.Size = new System.Drawing.Size(107, 27);
+            this.BasePriceTextBox.TabIndex = 4;
             // 
-            // textBox2
+            // AdditionalOptionsTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(175, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(118, 27);
-            this.textBox2.TabIndex = 5;
+            this.AdditionalOptionsTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalOptionsTextBox.Location = new System.Drawing.Point(195, 91);
+            this.AdditionalOptionsTextBox.Name = "AdditionalOptionsTextBox";
+            this.AdditionalOptionsTextBox.ReadOnly = true;
+            this.AdditionalOptionsTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.AdditionalOptionsTextBox.Size = new System.Drawing.Size(107, 27);
+            this.AdditionalOptionsTextBox.TabIndex = 5;
             // 
-            // textBox3
+            // SubTotalTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(175, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(118, 27);
-            this.textBox3.TabIndex = 6;
+            this.SubTotalTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubTotalTextBox.Location = new System.Drawing.Point(195, 128);
+            this.SubTotalTextBox.Name = "SubTotalTextBox";
+            this.SubTotalTextBox.ReadOnly = true;
+            this.SubTotalTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SubTotalTextBox.Size = new System.Drawing.Size(107, 27);
+            this.SubTotalTextBox.TabIndex = 6;
             // 
-            // textBox4
+            // SalesTaxTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(174, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(118, 27);
-            this.textBox4.TabIndex = 7;
+            this.SalesTaxTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(195, 160);
+            this.SalesTaxTextBox.Name = "SalesTaxTextBox";
+            this.SalesTaxTextBox.ReadOnly = true;
+            this.SalesTaxTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SalesTaxTextBox.Size = new System.Drawing.Size(107, 27);
+            this.SalesTaxTextBox.TabIndex = 7;
             // 
-            // textBox5
+            // TotalTextBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(174, 192);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(118, 27);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.TotalTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TotalTextBox.Location = new System.Drawing.Point(195, 193);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
+            this.TotalTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TotalTextBox.Size = new System.Drawing.Size(107, 27);
+            this.TotalTextBox.TabIndex = 8;
             // 
-            // textBox6
+            // AmountDueTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(174, 263);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(118, 27);
-            this.textBox6.TabIndex = 9;
+            this.AmountDueTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AmountDueTextBox.Location = new System.Drawing.Point(195, 263);
+            this.AmountDueTextBox.Name = "AmountDueTextBox";
+            this.AmountDueTextBox.ReadOnly = true;
+            this.AmountDueTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.AmountDueTextBox.Size = new System.Drawing.Size(107, 27);
+            this.AmountDueTextBox.TabIndex = 9;
             // 
             // AdditionalItemsBox
             // 
-            this.AdditionalItemsBox.Controls.Add(this.ComputerNavigationCheckBox3);
+            this.AdditionalItemsBox.Controls.Add(this.ComputerNavigationCheckBox);
             this.AdditionalItemsBox.Controls.Add(this.LeatherInteriorCheckBox);
             this.AdditionalItemsBox.Controls.Add(this.StereoSystemCheckBox);
             this.AdditionalItemsBox.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -168,15 +177,15 @@
             this.AdditionalItemsBox.TabStop = false;
             this.AdditionalItemsBox.Text = "Additional Items";
             // 
-            // ComputerNavigationCheckBox3
+            // ComputerNavigationCheckBox
             // 
-            this.ComputerNavigationCheckBox3.AutoSize = true;
-            this.ComputerNavigationCheckBox3.Location = new System.Drawing.Point(7, 76);
-            this.ComputerNavigationCheckBox3.Name = "ComputerNavigationCheckBox3";
-            this.ComputerNavigationCheckBox3.Size = new System.Drawing.Size(189, 24);
-            this.ComputerNavigationCheckBox3.TabIndex = 2;
-            this.ComputerNavigationCheckBox3.Text = "Computer Navigation";
-            this.ComputerNavigationCheckBox3.UseVisualStyleBackColor = true;
+            this.ComputerNavigationCheckBox.AutoSize = true;
+            this.ComputerNavigationCheckBox.Location = new System.Drawing.Point(7, 76);
+            this.ComputerNavigationCheckBox.Name = "ComputerNavigationCheckBox";
+            this.ComputerNavigationCheckBox.Size = new System.Drawing.Size(189, 24);
+            this.ComputerNavigationCheckBox.TabIndex = 2;
+            this.ComputerNavigationCheckBox.Text = "Computer Navigation";
+            this.ComputerNavigationCheckBox.UseVisualStyleBackColor = true;
             // 
             // LeatherInteriorCheckBox
             // 
@@ -200,9 +209,9 @@
             // 
             // ExteriorFinishBox
             // 
-            this.ExteriorFinishBox.Controls.Add(this.radioButton6);
-            this.ExteriorFinishBox.Controls.Add(this.radioButton5);
-            this.ExteriorFinishBox.Controls.Add(this.radioButton4);
+            this.ExteriorFinishBox.Controls.Add(this.CustomizedButton);
+            this.ExteriorFinishBox.Controls.Add(this.PearlizedButton);
+            this.ExteriorFinishBox.Controls.Add(this.StandardButton);
             this.ExteriorFinishBox.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExteriorFinishBox.Location = new System.Drawing.Point(308, 182);
             this.ExteriorFinishBox.Name = "ExteriorFinishBox";
@@ -210,57 +219,55 @@
             this.ExteriorFinishBox.TabIndex = 11;
             this.ExteriorFinishBox.TabStop = false;
             this.ExteriorFinishBox.Text = "Exterior Finish";
-            this.ExteriorFinishBox.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // radioButton6
+            // CustomizedButton
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton6.Location = new System.Drawing.Point(7, 68);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(187, 24);
-            this.radioButton6.TabIndex = 2;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Customized Detailing";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.CustomizedButton.AutoSize = true;
+            this.CustomizedButton.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomizedButton.Location = new System.Drawing.Point(7, 68);
+            this.CustomizedButton.Name = "CustomizedButton";
+            this.CustomizedButton.Size = new System.Drawing.Size(187, 24);
+            this.CustomizedButton.TabIndex = 2;
+            this.CustomizedButton.TabStop = true;
+            this.CustomizedButton.Text = "Customized Detailing";
+            this.CustomizedButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // PearlizedButton
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton5.Location = new System.Drawing.Point(7, 44);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(97, 24);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Pearlized";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.PearlizedButton.AutoSize = true;
+            this.PearlizedButton.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PearlizedButton.Location = new System.Drawing.Point(7, 44);
+            this.PearlizedButton.Name = "PearlizedButton";
+            this.PearlizedButton.Size = new System.Drawing.Size(97, 24);
+            this.PearlizedButton.TabIndex = 1;
+            this.PearlizedButton.TabStop = true;
+            this.PearlizedButton.Text = "Pearlized";
+            this.PearlizedButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // StandardButton
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Checked = true;
-            this.radioButton4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton4.Location = new System.Drawing.Point(7, 20);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(96, 24);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Standard";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.StandardButton.AutoSize = true;
+            this.StandardButton.Checked = true;
+            this.StandardButton.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StandardButton.Location = new System.Drawing.Point(7, 20);
+            this.StandardButton.Name = "StandardButton";
+            this.StandardButton.Size = new System.Drawing.Size(96, 24);
+            this.StandardButton.TabIndex = 0;
+            this.StandardButton.TabStop = true;
+            this.StandardButton.Text = "Standard";
+            this.StandardButton.UseVisualStyleBackColor = true;
             // 
             // BasePriceLabel
             // 
             this.BasePriceLabel.AutoSize = true;
             this.BasePriceLabel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BasePriceLabel.Location = new System.Drawing.Point(69, 58);
+            this.BasePriceLabel.Location = new System.Drawing.Point(12, 58);
             this.BasePriceLabel.Name = "BasePriceLabel";
             this.BasePriceLabel.Size = new System.Drawing.Size(100, 25);
             this.BasePriceLabel.TabIndex = 12;
             this.BasePriceLabel.Text = "Base Price : ";
             this.BasePriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BasePriceLabel.UseCompatibleTextRendering = true;
-            this.BasePriceLabel.Click += new System.EventHandler(this.BasePriceLabel_Click);
             // 
             // AdditionalOptionsLabel
             // 
@@ -271,51 +278,46 @@
             this.AdditionalOptionsLabel.Size = new System.Drawing.Size(160, 20);
             this.AdditionalOptionsLabel.TabIndex = 13;
             this.AdditionalOptionsLabel.Text = "Additional Options : ";
-            this.AdditionalOptionsLabel.Click += new System.EventHandler(this.AdditionalOptionsLabel_Click);
             // 
             // SubTotalLabel
             // 
             this.SubTotalLabel.AutoSize = true;
             this.SubTotalLabel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubTotalLabel.Location = new System.Drawing.Point(79, 128);
+            this.SubTotalLabel.Location = new System.Drawing.Point(18, 130);
             this.SubTotalLabel.Name = "SubTotalLabel";
             this.SubTotalLabel.Size = new System.Drawing.Size(89, 20);
             this.SubTotalLabel.TabIndex = 14;
             this.SubTotalLabel.Text = "SubTotal : ";
-            this.SubTotalLabel.Click += new System.EventHandler(this.SubTotalLabel_Click);
             // 
             // SalesTaxLabel
             // 
             this.SalesTaxLabel.AutoSize = true;
             this.SalesTaxLabel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SalesTaxLabel.Location = new System.Drawing.Point(37, 162);
+            this.SalesTaxLabel.Location = new System.Drawing.Point(18, 160);
             this.SalesTaxLabel.Name = "SalesTaxLabel";
             this.SalesTaxLabel.Size = new System.Drawing.Size(138, 20);
             this.SalesTaxLabel.TabIndex = 15;
             this.SalesTaxLabel.Text = "Sales Tax (13%) : ";
-            this.SalesTaxLabel.Click += new System.EventHandler(this.SalesTaxLabel_Click);
             // 
             // TotalLabel
             // 
             this.TotalLabel.AutoSize = true;
             this.TotalLabel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TotalLabel.Location = new System.Drawing.Point(104, 194);
+            this.TotalLabel.Location = new System.Drawing.Point(18, 194);
             this.TotalLabel.Name = "TotalLabel";
             this.TotalLabel.Size = new System.Drawing.Size(60, 20);
             this.TotalLabel.TabIndex = 16;
             this.TotalLabel.Text = "Total : ";
-            this.TotalLabel.Click += new System.EventHandler(this.TotalLabel_Click);
             // 
             // AmmountDueLabel
             // 
             this.AmmountDueLabel.AutoSize = true;
             this.AmmountDueLabel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AmmountDueLabel.Location = new System.Drawing.Point(57, 264);
+            this.AmmountDueLabel.Location = new System.Drawing.Point(18, 265);
             this.AmmountDueLabel.Name = "AmmountDueLabel";
             this.AmmountDueLabel.Size = new System.Drawing.Size(115, 20);
             this.AmmountDueLabel.TabIndex = 17;
             this.AmmountDueLabel.Text = "Amount Due : ";
-            this.AmmountDueLabel.Click += new System.EventHandler(this.AmmountDueLabel_Click);
             // 
             // menuStrip1
             // 
@@ -345,6 +347,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F10)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -364,6 +367,7 @@
             this.CalculateItem.Size = new System.Drawing.Size(157, 22);
             this.CalculateItem.Text = "Calculate";
             this.CalculateItem.ToolTipText = "Calculate";
+            this.CalculateItem.Click += new System.EventHandler(this.CalculateItem_Click);
             // 
             // clearToolStripMenuItem
             // 
@@ -371,6 +375,7 @@
             this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
@@ -378,6 +383,7 @@
             this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.fontToolStripMenuItem.Text = "Font";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
@@ -385,6 +391,7 @@
             this.colorToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
             // languageToolStripMenuItem
             // 
@@ -402,6 +409,7 @@
             | System.Windows.Forms.Keys.E)));
             this.englishToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // frenchToolStripMenuItem
             // 
@@ -410,6 +418,7 @@
             | System.Windows.Forms.Keys.F)));
             this.frenchToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.frenchToolStripMenuItem.Text = "French";
+            this.frenchToolStripMenuItem.Click += new System.EventHandler(this.frenchToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -441,11 +450,11 @@
             // TradeInTextBox
             // 
             this.TradeInTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TradeInTextBox.Location = new System.Drawing.Point(175, 226);
+            this.TradeInTextBox.Location = new System.Drawing.Point(195, 226);
             this.TradeInTextBox.Name = "TradeInTextBox";
-            this.TradeInTextBox.Size = new System.Drawing.Size(118, 27);
+            this.TradeInTextBox.Size = new System.Drawing.Size(107, 27);
             this.TradeInTextBox.TabIndex = 20;
-            this.TradeInTextBox.Text = "0";
+            this.TradeInTextBox.Text = "0.00";
             this.TradeInTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SharpAutoCenter
@@ -463,12 +472,12 @@
             this.Controls.Add(this.BasePriceLabel);
             this.Controls.Add(this.ExteriorFinishBox);
             this.Controls.Add(this.AdditionalItemsBox);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AmountDueTextBox);
+            this.Controls.Add(this.TotalTextBox);
+            this.Controls.Add(this.SalesTaxTextBox);
+            this.Controls.Add(this.SubTotalTextBox);
+            this.Controls.Add(this.AdditionalOptionsTextBox);
+            this.Controls.Add(this.BasePriceTextBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.CalculateButton);
@@ -476,7 +485,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SharpAutoCenter";
             this.Text = "Sharp Auto Center";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SharpAutoCenter_FormClosing);
             this.AdditionalItemsBox.ResumeLayout(false);
             this.AdditionalItemsBox.PerformLayout();
             this.ExteriorFinishBox.ResumeLayout(false);
@@ -493,24 +502,24 @@
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox BasePriceTextBox;
+        private System.Windows.Forms.TextBox AdditionalOptionsTextBox;
+        private System.Windows.Forms.TextBox SubTotalTextBox;
+        private System.Windows.Forms.TextBox SalesTaxTextBox;
+        private System.Windows.Forms.TextBox TotalTextBox;
+        private System.Windows.Forms.TextBox AmountDueTextBox;
         private System.Windows.Forms.GroupBox AdditionalItemsBox;
         private System.Windows.Forms.GroupBox ExteriorFinishBox;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton CustomizedButton;
+        private System.Windows.Forms.RadioButton PearlizedButton;
+        private System.Windows.Forms.RadioButton StandardButton;
         private System.Windows.Forms.Label BasePriceLabel;
         private System.Windows.Forms.Label AdditionalOptionsLabel;
         private System.Windows.Forms.Label SubTotalLabel;
         private System.Windows.Forms.Label SalesTaxLabel;
         private System.Windows.Forms.Label TotalLabel;
         private System.Windows.Forms.Label AmmountDueLabel;
-        private System.Windows.Forms.CheckBox ComputerNavigationCheckBox3;
+        private System.Windows.Forms.CheckBox ComputerNavigationCheckBox;
         private System.Windows.Forms.CheckBox LeatherInteriorCheckBox;
         private System.Windows.Forms.CheckBox StereoSystemCheckBox;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -528,6 +537,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label TradeInLabel;
         private System.Windows.Forms.TextBox TradeInTextBox;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 
